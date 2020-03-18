@@ -10,6 +10,6 @@ Fcc front end libraries project. Building a drum machine using react.
    4. each drum pad should have `audio` element with `src` attribute pointing to an audio clip, class `clip` and an id corresponding to the inner text of its parent.
    5. Clicking drum pad element, child elements audio clip should be triggered.
    6. Pressing key associated with drum pad, elements childs audio clip should be triggered.
-   7. Drum pad triggering, will make audio clip describsion string to be displayed as the inner text of the `#display` element.
+   7. Drum pad triggering, will make audio clip description string to be displayed as the inner text of the `#display` element.
 - Figure out way to play multiple audio clips at the same time.
 - 
