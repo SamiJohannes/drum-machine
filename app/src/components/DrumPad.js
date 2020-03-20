@@ -3,12 +3,11 @@ import PropTypes from 'prop-types'
 import './DrumPad.css'
 
 function DrumPad (props) {
-  const keys = props.innerKey
-  console.log(keys)
-  const keyPads = keys.map((x) =>
-    <button className='drum-pad' id={props.description} onclick={props.keydown} key={x.toString()}>
-      {x}
-      <audio id={keys[0]} className='clip' src={props.clip} />
+  const data = props.innerKey
+  const keyPads = data.map((x, index) =>
+    <button className='drum-pad' id={x.desc} onClick='' key={x.pad.toString()}>
+      {x.pad}
+      <audio id={x.pad} className='clip' src={props.clip[index]} />
     </button>
   )
 
