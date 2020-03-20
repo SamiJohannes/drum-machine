@@ -1,0 +1,19 @@
+.drum-pad {
+  background: cyan;
+  width: 75%;
+  height: 75%;
+  font-size: 1.2em;
+}
+
+.drum-pads {
+  background: cornflowerblue;
+  max-width: 60vw;
+  min-height: 60vh;
+  margin: auto;
+  margin-top: 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  justify-content: space-evenly;
+}

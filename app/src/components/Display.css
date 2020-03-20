@@ -1,0 +1,7 @@
+.display {
+  max-width: 25vw;
+  min-height: 10vh;
+  background: black;
+  margin: auto;
+  margin-top: 5%;
+}

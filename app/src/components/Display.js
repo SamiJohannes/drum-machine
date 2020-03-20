@@ -4,7 +4,7 @@ import './Display.css'
 
 const Display = (props) =>
   <div className='display'>
-    {this.props.playedClip}
+    {props.playedClip}
   </div>
 
 Display.propTypes = {
