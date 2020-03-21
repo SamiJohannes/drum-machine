@@ -5,9 +5,9 @@ import './DrumPad.css'
 function DrumPad (props) {
   const data = props.innerKey
   const keyPads = data.map((x, index) =>
-    <button className='drum-pad' id={x.desc} onClick='' key={x.pad.toString()}>
+    <button className='drum-pad' id={x.desc} onClick={() => document.getElementById(x.pad).play()} key={x.pad.toString()}>
       {x.pad}
-      <audio id={x.pad} className='clip' src={props.clip[index]} />
+      <audio id={x.pad} className='clip' src={props.clip[index]} onLoad={props.handleMounted} />
     </button>
   )
 
@@ -16,8 +16,9 @@ function DrumPad (props) {
 
 DrumPad.propTypes = {
   id: PropTypes.string,
-  onclick: PropTypes.func,
+  handleClick: PropTypes.func,
   innerKey: PropTypes.array,
-  clip: PropTypes.string
+  clip: PropTypes.array,
+  handleMounted: PropTypes.func
 }
 export default DrumPad
