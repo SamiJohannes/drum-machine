@@ -6,7 +6,10 @@ import Display from './components/Display'
 class App extends React.Component {
   constructor (props) {
     super(props)
-    this.state = { audioMounted: false }
+    this.state =
+    {
+      audioPlaying: ''
+    }
     function importAll (r) {
       return r.keys().map(r)
     }
@@ -22,25 +25,22 @@ class App extends React.Component {
     ]
     this.soundfiles = importAll(require.context('./assets', false, /\.wav$/))
     this.handleClick = this.handleClick.bind(this)
-    this.audioMounted = this.audioMounted.bind(this)
   }
 
-  audioMounted () {
-    this.setState({ audioMounted: true })
-  }
-
-  handleClick (id) {
+  handleClick (e) {
   //  const playClip = document.getElementById()
   //  console.log(playClip)
-    document.getElementById(id).play()
+    const playing = e
+    this.setState({ audioPlaying: playing })
+    console.log(e, playing)
   }
 
   render () {
     const keyPads = this.data
     return (
       <div id='drum-machine'>
-        <Display id='display' playedClip='' />
-        <DrumPad handleMounted={this.audioMounted} handleClick={this.state.audioMounted ? this.handleClick : null} innerKey={keyPads} clip={this.soundfiles} />
+        <Display id='display' playedClip={this.state.audioPlaying} />
+        <DrumPad onPlay={this.handleClick} innerKey={keyPads} clip={this.soundfiles} />
       </div>
     )
   }
