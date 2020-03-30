@@ -25,14 +25,18 @@ class App extends React.Component {
     ]
     this.soundfiles = importAll(require.context('./assets', false, /\.wav$/))
     this.handleClick = this.handleClick.bind(this)
+    this.handlePlay = this.handlePlay.bind(this)
   }
 
   handleClick (e) {
-  //  const playClip = document.getElementById()
-  //  console.log(playClip)
-    const playing = e
-    this.setState({ audioPlaying: playing })
-    console.log(e, playing)
+    const clip = document.getElementById(e)
+    clip.currentTime = 0
+    clip.currentTime === 0 ? clip.play() : clip.currentTime = 0
+  }
+
+  handlePlay (event) {
+    const audioClip = event
+    this.setState({ audioPlaying: audioClip })
   }
 
   render () {
@@ -40,7 +44,7 @@ class App extends React.Component {
     return (
       <div id='drum-machine'>
         <Display id='display' playedClip={this.state.audioPlaying} />
-        <DrumPad onPlay={this.handleClick} innerKey={keyPads} clip={this.soundfiles} />
+        <DrumPad onPlay={this.handlePlay} innerKey={keyPads} clip={this.soundfiles} onClick={this.handleClick} />
       </div>
     )
   }
