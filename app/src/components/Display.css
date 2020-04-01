@@ -1,8 +1,8 @@
 .display {
-  max-width: 25vw;
-  min-height: 10vh;
+  max-width: 15vw;
+  min-height: 5vh;
   background: black;
   margin: auto;
-  margin-top: 5%;
+  padding-top: 0;
   color: white;
 }
