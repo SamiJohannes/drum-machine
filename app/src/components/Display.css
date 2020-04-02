@@ -1,8 +1,13 @@
 .display {
-  max-width: 15vw;
-  min-height: 5vh;
-  background: black;
-  margin: auto;
-  padding-top: 0;
+  width: 75%;
+  height: 50%;
+  grid-area: display;
+  display: flex;
+  border-radius: 35%;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.76);
+  margin: 0;
+  padding: 2%;
   color: white;
 }

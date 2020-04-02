@@ -9,7 +9,7 @@ class App extends React.Component {
     super(props)
     this.state =
     {
-      audioPlaying: ''
+      audioPlaying: 'Drum-Machine'
     }
     function importAll (r) {
       return r.keys().map(r)

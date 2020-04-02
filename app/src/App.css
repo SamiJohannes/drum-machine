@@ -1,11 +1,27 @@
 #drum-machine {
   text-align: center;
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  background-color: rgba(100, 171, 237, 0.293);
+  border-radius: 10%;
+  height: 80vh;
+  width: 80vw;
+  max-width: 500px;
+  border: thistle 2px solid;
+  outline: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 2fr repeat(3, 1fr);
+  grid-template-areas:
+    "display display display"
+    "none none none"
+    "none none none"
+    "none none none";
   align-items: center;
-  justify-content: center;
+  justify-items: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+#drum-machine:focus {
+  border-color: teal;
 }

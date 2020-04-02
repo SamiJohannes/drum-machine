@@ -10,12 +10,20 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: slategray;
+  max-width: 100%;
+  height: auto;
+  background: rgb(15, 81, 168);
+  background-image: url("https://images.unsplash.com/photo-1578052411173-87a5ccf18e35");
+  background-size: cover;
+  background-position: center;
   margin: 0;
 }
 
 #root {
   min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

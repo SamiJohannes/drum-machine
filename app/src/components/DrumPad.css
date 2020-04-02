@@ -1,19 +1,13 @@
 .drum-pad {
-  background: cyan;
-  width: 75%;
-  height: 75%;
+  background: rgba(141, 202, 221, 0.8);
+  border: 2px solid white;
+  border-radius: 35%;
+  width: 85%;
+  height: 85%;
   font-size: 1.2em;
+  outline: none;
 }
 
-.drum-pads {
-  background: cornflowerblue;
-  max-width: 60vw;
-  min-height: 60vh;
-  margin: auto;
-  margin-top: 5%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-items: center;
-  align-items: center;
-  justify-content: space-evenly;
+.drum-pad:focus {
+  border-color: teal;
 }
