@@ -45,7 +45,6 @@ class App extends React.Component {
       <DrumPad
         desc={x.desc}
         pad={x.pad}
-        name={x.pad.toLowerCase()}
         key={x.pad.toString()}
         onClick={() => this.handleClick}
       >
