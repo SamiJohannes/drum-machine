@@ -45,6 +45,7 @@ class App extends React.Component {
       <DrumPad
         desc={x.desc}
         pad={x.pad}
+        name={x.pad.toLowerCase()}
         key={x.pad.toString()}
         onClick={() => this.handleClick}
       >
@@ -55,9 +56,11 @@ class App extends React.Component {
       <div
         id='drum-machine'
         tabIndex='-1'
-        onKeyPress={e => document.getElementById(e.key)
+        onKeyDown={e => document.getElementById(e.key)
           ? this.playClip(document.getElementById(e.key).parentElement.id, e.key)
-          : null}
+          : document.getElementById(e.key.toUpperCase())
+            ? this.playClip(document.getElementById(e.key.toUpperCase()).parentElement.id, e.key.toUpperCase())
+            : null}
       >
         <Display id='display' playedClip={this.state.audioPlaying} />
         {pads}
