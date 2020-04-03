@@ -14,15 +14,15 @@ class App extends React.Component {
     function importAll (r) {
       return r.keys().map(r)
     }
-    this.data = [{ pad: 'q', desc: 'hat-2' },
-      { pad: 'w', desc: 'hat-open-3' },
-      { pad: 'e', desc: 'kick-light' },
-      { pad: 'a', desc: 'kick' },
-      { pad: 's', desc: 'perc-1' },
-      { pad: 'd', desc: 'perc-2' },
-      { pad: 'z', desc: 'sidetick' },
-      { pad: 'x', desc: 'snare-2' },
-      { pad: 'c', desc: 'snare-roll-short' }
+    this.data = [{ pad: 'Q', desc: 'hat-2' },
+      { pad: 'W', desc: 'hat-open-3' },
+      { pad: 'E', desc: 'kick-light' },
+      { pad: 'A', desc: 'kick' },
+      { pad: 'S', desc: 'perc-1' },
+      { pad: 'D', desc: 'perc-2' },
+      { pad: 'Z', desc: 'sidetick' },
+      { pad: 'X', desc: 'snare-2' },
+      { pad: 'C', desc: 'snare-roll-short' }
     ]
     this.soundfiles = importAll(require.context('./assets', false, /\.wav$/))
     this.handleClick = this.handleClick.bind(this)
@@ -36,7 +36,6 @@ class App extends React.Component {
   }
 
   handleClick (e) {
-    console.log(e.type, e.target.id, e.target.children[0].id)
     this.playClip(e.target.id, e.target.children[0].id)
   }
 

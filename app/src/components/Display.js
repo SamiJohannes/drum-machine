@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import './Display.css'
 
 const Display = (props) =>
-  <div className='display'>
+  <div id='display'>
     {props.playedClip}
   </div>
 
